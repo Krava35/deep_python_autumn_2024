@@ -61,7 +61,8 @@ class TestFilter(unittest.TestCase):
         search_words = ["love"]
         stop_words = ["hey"]
         model = Filtratrion(file, search_words, stop_words)
-        answer = ["My love is beyond the pain\n", "My love is beyond the pain\n"]
+        answer = ["My love is beyond the pain\n",
+                  "My love is beyond the pain\n"]
         self.assertEqual(answer, model.filter())
 
     def test_8(self):
