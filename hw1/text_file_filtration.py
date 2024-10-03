@@ -1,4 +1,4 @@
-class Filtratrion():
+class Filtratrion:
     def __init__(self, file_path: str, search_words: list, stop_words: list):
         self.file_path = file_path
         self.search_words = tuple({word.lower() for word in set(search_words)})
@@ -23,7 +23,7 @@ class Filtratrion():
 
     def filter(self) -> list:
         try:
-            with open(self.file_path, 'r') as file:
+            with open(self.file_path, "r") as file:
                 return list(self.generator(file))
         except FileNotFoundError:
-            print('File Not Found')
+            print("File Not Found")

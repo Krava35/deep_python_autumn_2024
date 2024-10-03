@@ -3,6 +3,7 @@ class EstimationModel:
         total = sum(ord(char) for char in message)
         return total % 1000 / 1000
 
+
 def predict_message_mood(
     message: str,
     bad_thresholds: float = 0.3,
@@ -11,8 +12,8 @@ def predict_message_mood(
     model = EstimationModel()
     rate = model.predict(message)
     if rate <= bad_thresholds:
-        return 'неуд'
+        return "неуд"
     elif rate >= good_thresholds:
-        return 'отл'
+        return "отл"
     else:
-        return 'норм'
+        return "норм"
