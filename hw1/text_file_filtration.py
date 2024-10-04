@@ -21,9 +21,10 @@ class Filtratrion:
                     yield line
                     break
 
-    def filter(self) -> list:
+    def filter(self):
         try:
-            with open(self.file_path, "r") as file:
+            with open(self.file_path, "r", encoding='utf-8') as file:
                 return list(self.generator(file))
         except FileNotFoundError:
             print("File Not Found")
+            raise
