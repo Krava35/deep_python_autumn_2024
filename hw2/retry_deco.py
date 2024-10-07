@@ -21,8 +21,8 @@ def retry_deco(
                     if (errors) and (type(exception) in errors):
                         print(f"    attemp={i+1} | {type(exception).__name__}")
                         break
-                    else:
-                        print(f"    attemp={i+1} | {type(exception).__name__}")
+
+                    print(f"    attemp={i+1} | {type(exception).__name__}")
                 else:
                     print(f"    attemp={i+1} | {res=}")
                     break

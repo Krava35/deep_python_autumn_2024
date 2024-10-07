@@ -15,9 +15,9 @@ def parse(
                 for token in tokens:
                     if isinstance(obj[key], str):
                         value = obj[key].lower()
-                    if isinstance(obj[key], list):
+                    else:
                         value = [x.lower() for x in obj[key]]
                     if token.lower() in value:
                         callback(key, token)
     except TypeError:
-        print('Wrong input type!')
+        print("Wrong input type!")
